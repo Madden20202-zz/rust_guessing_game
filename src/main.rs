@@ -1,6 +1,8 @@
 // How to import a package in a file 
 use std::io;
 
+//fn stands for function
+//main() is the entry point for your program
 fn main() {
     println!("Guess the Number!");
 
@@ -8,6 +10,7 @@ fn main() {
 
     // mut is short for mutable, 
     //allowing the value to be any string value
+    //all variables are immutable by default
     let mut guess = String::new();
 
     io::stdin()
