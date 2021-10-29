@@ -27,6 +27,7 @@ fn main() {
 
     // Secret Number generation
     // creates a number between 1 and 100
+    // note that the second number is exclusive and not used
     let secret_number = rand::thread_rng().gen_range(1..101);
 
     println!("The Secret Number is {}", secret_number);
