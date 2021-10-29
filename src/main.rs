@@ -32,4 +32,14 @@ fn main() {
     let secret_number = rand::thread_rng().gen_range(1..101);
 
     println!("The Secret Number is {}", secret_number);
+
+    // Comparing the two variables
+
+    //allows the guess string to be compared to the integer 
+    let guess: u32 = guess.trim().parse().expect("Please Type a Number.");
+    match guess.cmp(&secret_number) {
+        Ordering::Less => println!("Too Low!");
+        Ordering::Greater => println!("Too High!");
+        Ordering::Equal => println!("You got It!"); 
+    }
 }
