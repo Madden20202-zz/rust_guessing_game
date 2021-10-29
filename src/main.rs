@@ -26,6 +26,12 @@ fn main() {
             //failing to add this line will cause a warning to appear
             .expect("Failed to read line.");
 
+        //checks the guess value
+        let guess: u32 = match guess.trim().parse() {
+            Ok(num) => num,
+            Err(_) => continue,
+        };
+
         println!("Did you guess: {}", guess);
 
         // Secret Number generation
