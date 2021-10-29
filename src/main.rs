@@ -1,6 +1,7 @@
 // How to import a package in a file 
 use std::io;
 use rand::Rng;
+use std::cmp::Ordering;
 
 //fn stands for function
 //main() is the entry point for your program
