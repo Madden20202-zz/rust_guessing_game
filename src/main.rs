@@ -6,7 +6,8 @@ use std::cmp::Ordering;
 //fn stands for function
 //main() is the entry point for your program
 fn main() {
-    println!("Guess the Number!");
+    loop {
+        println!("Guess the Number!");
 
     println!("Please input a Guess.");
 
@@ -42,5 +43,7 @@ fn main() {
         Ordering::Less => println!("Too Low!"),
         Ordering::Greater => println!("Too High!"),
         Ordering::Equal => println!("You got It!"), 
+    }
+    
     }
 }
