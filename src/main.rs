@@ -37,7 +37,7 @@ fn main() {
             Err(_) => continue,
         };
 
-        println!("Did you guess: {}", guess);
+        println!("Your Guess: {}", guess);
 
         // Comparing the two variables
         match guess.cmp(&secret_number) {
