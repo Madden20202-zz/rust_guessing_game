@@ -24,4 +24,10 @@ fn main() {
         .expect("Failed to read line.");
 
     println!("Did you guess: {}", guess);
+
+    // Secret Number generation
+    // creates a number between 1 and 100
+    let secret_number = rand::thread_rng().gen_range(1..101);
+
+    println!("The Secret Number is {}", secret_number);
 }
