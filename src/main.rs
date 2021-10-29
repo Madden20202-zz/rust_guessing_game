@@ -11,6 +11,11 @@ fn main() {
 
     println!("Please input a Guess.");
 
+    // Secret Number generation
+    // creates a number between 1 and 100
+    // note that the second number is exclusive and not used
+    let secret_number = rand::thread_rng().gen_range(1..101);
+
     loop {
         // mut is short for mutable, 
         //allowing the value to be any string value
@@ -34,18 +39,7 @@ fn main() {
 
         println!("Did you guess: {}", guess);
 
-        // Secret Number generation
-        // creates a number between 1 and 100
-        // note that the second number is exclusive and not used
-        let secret_number = rand::thread_rng().gen_range(1..101);
-
-        println!("The Secret Number is {}", secret_number);
-
         // Comparing the two variables
-
-        //allows the guess string to be compared to the integer 
-        let guess: u32 = guess.trim().parse().expect("Please Type a Number.");
-        
         match guess.cmp(&secret_number) {
             Ordering::Less => println!("Too Low!"),
             Ordering::Greater => println!("Too High!"),
